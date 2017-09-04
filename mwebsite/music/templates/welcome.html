@@ -1,0 +1,138 @@
+{% load static %}
+    <title>Rhoads</title>
+
+<div class="container">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+      <video poster="{% static 'Sunset-Siesta/Snapshots/Sunset-Siesta.jpg' %}" autoplay loop muted>
+      <source src="{% static 'Sunset-Siesta/MP4/Sunset-Siesta.mp4' %}" type="video/mp4">
+      <source src="{% static 'Sunset-Siesta/WEBM/Sunset-Siesta.webm' %}" type="video/webm">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="content">
+            <h1>Rhoads</h1>
+
+      <div class="btn-group">
+        <a href="/signup" class="btn btn-custom" role="button">Signup</a>
+        <a href="/login" class="btn btn-custom1" role="button">Login!</a>
+
+
+
+<style media="screen" type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+video, .video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.video-overlay {
+  background: rgba(0,0,0, 0.5);
+}
+
+.content {
+  position: relative;
+  height: 150vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+    font-family: Satisfy, cursive;
+}
+
+h5 {
+  font-size: 1em;
+  background: lightblue;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.btn-custom1 {
+  background-color: hsl(0, 0%, 20%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333", endColorstr="#333333");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#333333));
+  background-image: -moz-linear-gradient(top, #333333, #333333);
+  background-image: -ms-linear-gradient(top, #333333, #333333);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #333333));
+  background-image: -webkit-linear-gradient(top, #333333, #333333);
+  background-image: -o-linear-gradient(top, #333333, #333333);
+  background-image: linear-gradient(#333333, #333333);
+  border-color: #333333 #333333 hsl(0, 0%, 20%);
+  color: #fff !important;
+  text-shadow: 0 10px 0 rgba(0, 0, 0, 0.00);
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.btn-custom {
+
+  background-color: hsl(0, 0%, 70%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333", endColorstr="#333333");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#333333));
+  background-image: -moz-linear-gradient(top, #333333, #333333);
+  background-image: -ms-linear-gradient(top, #333333, #333333);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #333333));
+  background-image: -webkit-linear-gradient(top, #333333, #333333);
+  background-image: -o-linear-gradient(top, #333333, #333333);
+  background-image: linear-gradient(#333333, #333333);
+  border-color: #333333 #333333 hsl(0, 0%, 20%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+  -webkit-font-smoothing: antialiased;
+
+}
+/*.btn-circle{font-size:26px;width:55px;height:55px;margin-top:15px;*/
+    /*line-height:38px;*/
+    /*-webkit-transition:background .3s ease-in-out;*/
+    /*-moz-transition:background .3s ease-in-out;*/
+    /*transition:background .3s ease-in-out;*/
+    /*color:#fff;*/
+    /*border:2px solid #fff;*/
+    /*border-radius:100%!important;background:0 0;*/
+/*}*/
+/*.btn-circle:hover{*/
+    /*color:#fff;outline:0;*/
+    /*background:rgba(255,255,255,.1)}*/
+/*.btn {*/
+  /*font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-weight: 400;*/
+  /*-webkit-transition: all 0.3s ease-in-out;*/
+  /*-moz-transition: all 0.3s ease-in-out;*/
+  /*transition: all 0.3s ease-in-out;*/
+  /*text-transform: uppercase;*/
+  /*border-radius: 0; }*/
+
+</style>
+

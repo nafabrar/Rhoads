@@ -1,0 +1,30 @@
+
+body {
+    padding-top: 60px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+h5{
+    font-family:Monospace;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: larger;
+}
+.element.style>.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img img
+
+{  margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    padding: 70px;
+    background: white;
+    border: white;
+    width: 800px;
+    height: 50%;
+}

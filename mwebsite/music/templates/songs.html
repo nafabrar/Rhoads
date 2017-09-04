@@ -1,0 +1,55 @@
+{% load static %}
+
+<!--Adding bootstrap-->
+<html>
+<head>
+    <title>HTML5 Audio Player</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'music/style1.css' %}"/>
+</head>
+{% block body %}
+
+<body>
+	<div id="container">
+		<div id="audio-image">
+			<img class="cover">
+		</div>
+		<div id="audio-player">
+			<div id="audio-info">
+				<span class="artist"></span> - <span class="title"></span>
+			</div>
+			<input id="volume" type="range" min="0" max="10" value="4">
+			<br>
+			<div id="buttons">
+				<span>
+					<button id="prev"></button>
+					<button id="play"></button>
+					<button id="pause"></button>
+					<button id="stop"></button>
+					<button id="next"></button>
+				</span>
+			</div>
+			<div class="clearfix"></div>
+			<div id="tracker">
+				<div id="progress-bar">
+					<span id="progress"></span>
+				</div>
+				<span id="duration"></span>
+			</div>
+			<div class="clearfix"></div>
+			<ul id="playlist" class="hidden">
+               {% for place in songs %}
+               <li class="active" song={{place.song}}>Papercut.mp3</li>
+
+               {% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{% static '/music/js/jquery.js' %}"></script>
+
+
+	<script type="text/javascript" src="{% static '/music/js/main.js' %}"></script>
+</body>
+</html>
+
+{% endblock %}

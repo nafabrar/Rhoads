@@ -1,0 +1,14 @@
+
+{% extends 'music/base.html' %}
+<!--Adding bootstrap-->
+
+{% block body %}
+
+<!--Details-->
+    <ul>
+        {% for user in object_list %}
+            {{user.songs}}
+        {% endfor %}
+
+    </ul>
+{% endblock %}

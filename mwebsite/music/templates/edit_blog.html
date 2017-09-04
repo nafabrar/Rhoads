@@ -1,0 +1,12 @@
+
+{% block content %}
+
+  <p><a href="{% url 'music:blog' blog.id %}">{{ blog }}</a></p>
+
+  <form action="{% url 'music:edit_blog' blog.id %}" method='post' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">save changes</button>
+  </form>
+
+{% endblock content %}

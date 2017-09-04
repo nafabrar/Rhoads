@@ -1,0 +1,154 @@
+{% load static %}
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Rhoads</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog-post.css' %}">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+
+  </head>
+
+{% block content %}
+
+
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <a class="navbar-brand" href="{% url 'music:index' %}">Rhoads</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music:all_blogs' %}">All Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music:blogs' %}">Bloghome</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music:logout' %}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation -->
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">-->
+      <!--<div class="container">-->
+        <!--<a class="navbar-brand" href="#">Start Bootstrap</a>-->
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+          <!--<span class="navbar-toggler-icon"></span>-->
+        <!--</button>-->
+        <!--<div class="collapse navbar-collapse" id="navbarResponsive">-->
+          <!--<ul class="navbar-nav ml-auto">-->
+            <!--<li class="nav-item active">-->
+              <!--<a class="nav-link" href="#">Home-->
+                <!--<span class="sr-only">(current)</span>-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="#">About</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="#">Services</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="#">Contact</a>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</nav>-->
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-12">
+
+          <!-- Title -->
+          <h1 class="mt-4">{{blog.text}}</h1>
+
+          <!-- Author -->
+          <p2 class="lead">
+            by
+            <a href="{% url 'music:blogs' %}">{{blog.owner}}</a>
+          </p2>
+
+          <hr>
+
+          <!-- Date/Time -->
+          <h5>Posted on {{blog.date_added}}</h5>
+                {% if blog.image %}
+
+                <img src="/../../../{{MEDIA_ROOT}}{{ blog.image.url }}" class="img-responsive" >
+                    {% else %}
+                 <h3>No image to display</h3>
+                     {% endif %}
+                     <p>{{ blog.body }}</p>
+                        <form action="{% url 'music:edit_blog' blog.id %}" method='post'>
+                                {% csrf_token %}
+                            <div class="form">
+
+                                {{ form.as_p }}
+                            </div>
+
+                                <button name="submit">Edit</button>
+                        </form>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+
+
+          <!-- Side Widget -->
+
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Nafis Abrar 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!--&lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
+    <!--<script src="vendor/jquery/jquery.min.js"></script>-->
+    <!--<script src="vendor/popper/popper.min.js"></script>-->
+    <!--<script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+
+  </body>
+
+</html>
+
+
+{% endblock content %}

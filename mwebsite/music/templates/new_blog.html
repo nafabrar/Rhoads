@@ -1,0 +1,11 @@
+
+{% block content %}
+  <p>Add a new blog:</p>
+
+  <form action="{% url 'music:new_blog' %}" method='post' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Add blog!</button>
+  </form>
+    
+{% endblock content %}
