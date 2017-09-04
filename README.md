@@ -1,11 +1,11 @@
 # Rhoads
 A Blog and Music website. You can store your blogs and music, but must have an account first!
 
-To run it:
+To run the website on your machine:
 
 1.Go to mwebsite dir in your terminal
 
-2.Use the following command in mwebsite:./manage.py runserver 
+2.Use the following command in mwebsite:"./manage.py runserver" 
 
 3.The 'runserver' command will run the website on your local server.So in your browser do localhost:8000 to run the website.Enjoy!!
 
