@@ -2,6 +2,7 @@
 A Blog and Music website. You can store your blogs and music, but must have an account first!
 
 To run it:
+
 1.Go to mwebsite dir in your terminal
 
 2.Use the following command in mwebsite:./manage.py runserver 
